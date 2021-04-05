@@ -1,0 +1,279 @@
+:root {
+  --limeGreen: hsl(163, 72%, 41%);
+  --brightRed: hsl(356, 69%, 56%);
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) ;
+  --YouTube: hsl(348, 97%, 39%);
+  /* Dark Theme toggle */
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%) , hsl(146, 68%, 55%)) ;
+  /* light Theme toggle */
+  --Toggle-light: hsl(230, 22%, 74%);
+  /* Dark Theme */
+  --VeryDarkBlueBG: hsl(230, 17%, 14%);
+  --VeryDarkBlueTopBGPattern: hsl(232, 19%, 15%);
+  --DarkDesaturatedBlueCardBG: hsl(228, 28%, 20%);
+  --DesaturatedBlueText: hsl(228, 34%, 66%);
+  --WhiteText: hsl(0, 0%, 100%);
+  /* light Theme */
+  --WhiteBG: hsl(0, 0%, 100%);
+  --VeryPaleBlueTopBGPattern: hsl(225, 100%, 98%);
+  --LightGrayishBlueCardBG: hsl(227, 47%, 96%);
+  --DarkGrayishBlueText: hsl(228, 12%, 44%);
+  --VeryDarkBlueText: hsl(230, 17%, 14%);
+
+  --FontsizeOverviewCardHeadings: 14px;
+}
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--VeryDarkBlueBG);
+}
+.container-grid {
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+}
+.introduction-grid-element {
+  display: flex;
+  flex-flow: row wrap;
+}
+.dashboard_title, .theme_toggle{
+    flex: 0 1 100%;
+}
+.dashboard_title{
+    margin: 0 0 2rem 0;
+}
+.name{
+    font-family: sans-serif;
+    color: var(--WhiteText);
+}
+.total_followers{
+    font-family: sans-serif;
+    color: var(--DesaturatedBlueText);
+    font-size: .9rem;
+}
+
+.followers-grid-element {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.col{
+    margin: .5rem 0;
+    flex: 0 1 100%;
+}
+.social-media-wrapper {
+  background-color: var(--DarkDesaturatedBlueCardBG);
+  border-radius: 0 0 0.5rem 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.facebook{
+    background-color: var(--Facebook);
+    border-radius: .5rem .5rem 0 0;
+    height: 5px;
+    outline: none;
+    border-style: none;
+}
+.twitter{
+    background-color: var(--Twitter);
+    border-radius: .5rem .5rem 0 0;
+    height: 5px;
+    outline: none;
+    border-style: none;
+}
+.instagram{
+    background-image: var(--Instagram);
+    border-radius: .5rem .5rem 0 0;
+    height: 5px;
+    outline: none;
+    border-style: none;
+}
+.youtube{
+    background-color: var(--YouTube);
+    border-radius: .5rem .5rem 0 0;
+    height: 5px;
+    outline: none;
+    border-style: none;
+}
+.social-media-handle{
+    margin: 0 0 1rem 0;
+    color: var(--DesaturatedBlueText);
+    font-size: .9rem;
+    position: relative;
+}
+.social-media-handle span {
+    font-size: .8rem;
+}
+.social-media-followers{
+    display: inline-block;
+    margin: 0 0 1rem 0;
+    color: var(--WhiteText);
+}
+.social-media-todays-follower-facebook{
+    color: var(--WhiteText);
+    font-size: .8rem;
+}
+.social-media-todays-follower-twitter{
+    color: var(--limeGreen);
+    font-size: .8rem;
+}
+.social-media-todays-follower-instagram{
+    color: var(--limeGreen);
+    font-size: .8rem;
+}
+.social-media-todays-follower-youtube{
+    color: var(--brightRed);
+    font-size: .8rem;
+}
+.social-media-followers p {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+.social-media-followers span{
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+.overview-card{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.col-2{
+    margin: 0 0 .5rem 0;
+    flex: 0 1 100%;
+}
+.overview-today{
+    font-family: sans-serif;
+    color: var(--WhiteText);
+    margin-bottom: 2rem;
+}
+.overview-wrapper{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "page-views ... social-media-icon"
+    "views-count ... percentage-indicator";
+    background-color: var(--DarkDesaturatedBlueCardBG);
+    border-radius: 3%;
+    padding: 2rem;
+}
+.page-views{
+    grid-area: page-views;
+    font-family: sans-serif;
+    color: var(--DesaturatedBlueText);
+    font-weight: bold;
+}
+.views-count{
+    grid-area: views-count;
+    font-family: sans-serif;
+    font-size: 2rem;
+    color: var(--WhiteText);
+    font-weight: bold;
+}
+.social-media-icon{
+    grid-area: social-media-icon;
+    margin-left: 1rem;
+}
+.percentage-indicator{
+    grid-area: percentage-indicator;
+    font-family: sans-serif;
+    color: var(--limeGreen);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.percentage{
+    font-size: .7rem;
+}
+.decrease{
+    color: var(--brightRed);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* --------------------------------------------- */
+.theme_toggle{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    color: var(--DesaturatedBlueText);
+    font-size: .9rem;
+}
+.mode{
+    text-align: center;
+    font-size: 1rem;
+}
+.mode em{
+    font-style: normal;
+}
+.theme-switcher-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.theme-switcher-wrapper em{
+  margin-right: 0.8rem;
+  font-size: 0.9rem;
+  
+}
+.theme-switcher {
+  display: inline-block;
+  height: 1.3rem;
+  position: relative;
+  width: 3rem;
+}
+label {
+  margin-bottom: 3px;
+}
+.theme-switcher input {
+  display: none;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+}
+.slider.round {
+  border-radius: 2rem;
+}
+.slider {
+  background-image: var(--Toggle);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.slider:before {
+  background-color: var(--VeryDarkBlueBG);
+  bottom: 2px;
+  left: 2px;
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  transition: 0.4s;
+  content: "";
+}
+.dark{
+    margin-left: .8rem;
+}
+
+/* --------------------------------------------- */

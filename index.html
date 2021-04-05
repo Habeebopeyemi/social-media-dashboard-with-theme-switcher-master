@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>
+      Frontend Mentor | [social-media-dashboard-with-theme-switcher-master]
+    </title>
+  </head>
+  <body>
+    <div class="container-grid">
+      <section class="introduction-grid-element">
+        <div class="dashboard_title">
+          <h1 class="name">Social Media Dashboard</h1>
+          <p class="total_followers">Total Followers: 23,004</p>
+        </div>
+        <div class="theme_toggle">
+            <div class="mode">
+              <em class="dark">Dark</em>
+            </div>
+            <div class="theme-switcher-wrapper">
+              <label for="checkbox" class="theme-switcher">
+                  <input type="checkbox" id="checkbox">
+                  <div class="slider round">
+                      <!-- ::before -->
+                  </div>
+              </label>
+    </div>
+        </div>
+      </section>
+      <section class="followers-grid-element">
+        <div class="col col-1-4">
+          <hr class="facebook">
+          <div class="social-media-wrapper">
+            <p class="social-media-handle">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <span>@nathanf</span>
+            </p>
+            <span class="social-media-followers">
+              <p>1987</p>
+              <span>FOLLOWERS</span>
+            </span>
+            <p class="social-media-todays-follower-facebook">
+              <img src="./images/icon-up.svg" alt="" />
+              <span>12</span>
+              Today
+            </p>
+          </div>
+        </div>
+        <div class="col col-1-4">
+          <hr class="twitter">
+          <div class="social-media-wrapper">
+            <p class="social-media-handle">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <span>@nathanf</span>
+            </p>
+            <span class="social-media-followers">
+              <p>1044</p>
+              <span>FOLLOWERS</span>
+            </span>
+            <p class="social-media-todays-follower-twitter">
+              <img src="./images/icon-up.svg" alt="" />
+              <span>99</span>
+              Today
+            </p>
+          </div>
+        </div>
+        <div class="col col-1-4">
+          <hr class="instagram">
+          <div class="social-media-wrapper">
+            <p class="social-media-handle">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <span> @realnathanf </span>
+            </p>
+            <span class="social-media-followers">
+              <p>11K</p>
+              <span>FOLLOWERS</span>
+            </span>
+            <p class="social-media-todays-follower-instagram">
+              <img src="./images/icon-up.svg" alt="" />
+              <span>1999</span>
+              Today
+            </p>
+          </div>
+        </div>
+        <div class="col col-1-4">
+          <hr class="youtube">
+          <div class="social-media-wrapper">
+            <p class="social-media-handle">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <span>Nathan F.</span>
+            </p>
+            <span class="social-media-followers">
+              <p>8239</p>
+              <span>SUBSCRIBERS</span>
+            </span>
+            <p class="social-media-todays-follower-youtube">
+              <img src="./images/icon-down.svg" alt="" />
+              <span>144</span>
+              Today
+            </p>
+          </div>
+        </div>
+        <!-- <div class="col-2">
+          <div class="social-media-wrapper"></div>
+        </div>
+        <div class="col-3">
+          <div class="social-media-wrapper"></div>
+        </div> -->
+      </section>
+      <section class="overviewToday-grid-element">
+        <h2 class="overview-today">Overview - Today</h2>
+        <div class="overview-card">
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Page Views</p></div>
+              <span class="views-count">87</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-up.svg" alt="" class="indicator" />
+                <span class="percentage">3%</span>
+              </picture>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Likes</p></div>
+              <span class="views-count">52</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-down.svg" alt="" class="indicator" />
+                <span class="percentage decrease">2%</span>
+              </picture>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Likes</p></div>
+              <span class="views-count">5462</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-up.svg" alt="" class="indicator" />
+                <span class="percentage">2257%</span>
+              </picture>
+            </div>
+          </div>
+         <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Profile Views</p></div>
+              <span class="views-count">52k</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-instagram.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-up.svg" alt="" class="indicator" />
+                <span class="percentage">1375%</span>
+              </picture>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Retweets</p></div>
+              <span class="views-count">117</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-up.svg" alt="" class="indicator" />
+                <span class="percentage">303%</span>
+              </picture>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Likes</p></div>
+              <span class="views-count">507</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-up.svg" alt="" class="indicator" />
+                <span class="percentage">553%</span>
+              </picture>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Likes</p></div>
+              <span class="views-count">107</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-youtube.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-down.svg" alt="" class="indicator" />
+                <span class="percentage decrease">19%</span>
+              </picture>
+            </div>
+          </div>
+           <div class="col-2">
+            <div class="overview-wrapper">
+              <div class="page-views"><p>Total Views</p></div>
+              <span class="views-count">1407</span>
+              <picture class="social-media-icon">
+                <img
+                  src="./images/icon-youtube.svg"
+                  alt=""
+                  class="social-media-icon"
+                />
+              </picture>
+              <picture class="percentage-indicator">
+                <img src="./images/icon-down.svg" alt="" class="indicator" />
+                <span class="percentage decrease">12%</span>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Habeebopeyemi">Deveeb</a>.
+    </div>
+  </body>
+</html>
