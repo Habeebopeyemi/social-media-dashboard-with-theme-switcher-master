@@ -33,6 +33,10 @@
 }
 body {
   background-color: var(--VeryDarkBlueBG);
+  transition: 1s ease;
+}
+body.on{
+  background-color: var(--WhiteBG);
 }
 .container-grid {
   display: grid;
@@ -54,6 +58,9 @@ body {
   font-family: sans-serif;
   color: var(--WhiteText);
 }
+.name.on{
+  color: var(--VeryDarkBlueText);
+}
 .total_followers {
   font-family: sans-serif;
   color: var(--DesaturatedBlueText);
@@ -74,6 +81,9 @@ body {
   border-radius: 0 0 0.5rem 0.5rem;
   padding: 1rem;
   text-align: center;
+}
+.social-media-wrapper.wrapper-background {
+  background-color: var(--LightGrayishBlueCardBG);
 }
 .facebook {
   background-color: var(--Facebook);
@@ -117,9 +127,19 @@ body {
   margin: 0 0 1rem 0;
   color: var(--WhiteText);
 }
+.followers-count.on {
+  color: var(--VeryDarkBlueText);
+}
+
+.social-media-followers.followers {
+color: var(--DesaturatedBlueText);
+}
 .social-media-todays-follower-facebook {
   color: var(--WhiteText);
   font-size: 0.8rem;
+}
+.social-media-todays-follower-facebook.on{
+  color: var(--limeGreen);
 }
 .social-media-todays-follower-twitter {
   color: var(--limeGreen);
@@ -157,6 +177,9 @@ body {
   color: var(--WhiteText);
   margin-bottom: 2rem;
 }
+.overview-today.on{
+  color: var(--DesaturatedBlueText);
+}
 /* .overview-wrapper{
     display: grid;
     gap: 1rem;
@@ -176,6 +199,9 @@ body {
   background-color: var(--DarkDesaturatedBlueCardBG);
   border-radius: 3%;
   padding: 2rem;
+}
+.overview-wrapper.on{
+  background-color: var(--LightGrayishBlueCardBG);
 }
 .page_like_icon {
   flex: 0 1 100%;
@@ -204,6 +230,9 @@ body {
   color: var(--WhiteText);
   font-weight: bold;
 }
+.views-count.on{
+  color: var(--VeryDarkBlueText);
+}
 .social-media-icon {
   grid-area: social-media-icon;
   margin-left: 1rem;
@@ -229,77 +258,56 @@ body {
   color: hsl(228, 45%, 44%);
 }
 /* --------------------------------------------- */
-.theme_toggle {
+.container{
+  position: relative;
   display: flex;
   justify-content: space-between;
-  font-family: sans-serif;
-  color: var(--DesaturatedBlueText);
-  font-size: 0.9rem;
+  align-items: center;
+  width: 100%;
 }
-.mode {
-  text-align: center;
-  font-size: 1rem;
+.switch{
+  background-color: var(--limeGreen);
+  border-radius: 2.5rem;
+  width: 5rem;
+  min-height:1.5rem;
+  cursor: pointer;
+  padding: 0.208125rem;
+  margin-right: 20px;
+  transition: .4s ease;
 }
-.mode em {
-  font-style: normal;
-}
-.theme-switcher-wrapper {
-  display: flex;
+.switch::before {
+  content: "";
+  display:flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-}
-.theme-switcher-wrapper em {
-  margin-right: 0.8rem;
-  font-size: 0.9rem;
-}
-.theme-switcher {
-  display: inline-block;
-  height: 1.3rem;
-  position: relative;
-  width: 3rem;
-}
-label {
-  margin-bottom: 3px;
-}
-.theme-switcher input {
-  display: none;
-  margin-bottom: 5px;
-  font-family: sans-serif;
-}
-.slider.round {
-  border-radius: 2rem;
-}
-.slider {
-  background-image: var(--Toggle);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  transition: 0.4s;
-  cursor: pointer;
-}
-.slider.round:before {
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
+  background-color: white;
+  transition: .4s ease;
 }
-.slider:before {
-  background-color: var(--VeryDarkBlueBG);
-  bottom: 2px;
-  left: 2px;
-  height: 1rem;
-  width: 1rem;
-  position: absolute;
-  transition: 0.4s;
+.switch.on{
+  background-color: var(--DarkGrayishBlueText)
+}
+.switch.on::before{
   content: "";
+  transform: translateX( 3.125rem ) rotate(180deg);
 }
-.dark {
-  margin-left: 0.8rem;
+label{
+  font-family: sans-serif;
+  font-size: 1rem;
+  width: 3.75rem;
+  color: var(--WhiteBG);
+  flex: 0 1 50%;
 }
-
 /* --------------------------------------------- */
 @media only screen and (min-width: 574px) {
+  .container{
+    justify-content: flex-end;
+  }
+  label{
+    flex: 0 1 20%;
+  }
   .overview-card{
     justify-content: space-evenly;
   }
@@ -308,6 +316,7 @@ label {
   }
 }
 @media only screen and (min-width: 767px){
+ 
   .introduction-grid-element{
     padding: 2rem;
   }
@@ -322,11 +331,17 @@ label {
 }
 }
 @media only screen and (min-width: 790px){
+  label{
+    flex: 0 1 15%;
+  }
   .introduction-grid-element{
     padding: 2rem;
   }
 }
 @media only screen and (min-width: 1029px){
+  label{
+    flex: 0 1 10%;
+  }
   .introduction-grid-element{
     padding: 2rem;
   }
